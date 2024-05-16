@@ -36,12 +36,13 @@ jobs:
       - name: "🔧 setup node"
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 21
 
       - name: "🔧 Install pnpm@latest"
         uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: latest
+          run_install: true
 
       - name: "🔧 Install dependencies"
         run: pnpm install
