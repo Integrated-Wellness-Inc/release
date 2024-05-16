@@ -1,4 +1,3 @@
-const { existsSync } = require("node:fs");
 const { execSync } = require("node:child_process");
 const log = require("npmlog");
 

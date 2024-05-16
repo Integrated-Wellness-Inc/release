@@ -2,7 +2,7 @@
   <img src="https://github.com/integrated-wellness-inc.png" width="400">
 </div>
 
-# @medijobs/release
+# @golivwell/release
 
 > [**semantic-release**](https://github.com/semantic-release/semantic-release) shareable config to publish to `npm` and/or `ghcr`.
 
@@ -37,7 +37,6 @@ Most important limitations are:
 
 - `GITHUB_TOKEN` for everything
 - `NPM_TOKEN` for public `npm` library
-- `docker` containers need to be built beforehand
 
 You can skip here if you are using elevated [Private Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token), however we don't recommend going down that path.
 
@@ -47,7 +46,7 @@ No force push or admin cherries branch protections for the following branches:
 - `next` - optional, next channel
 - `next-major` - optional, next major
 - `alpha` - optional, pre-release branch
-- `beta` - optional, pre-release branch
+- `dev` - optional, pre-release branch
 - `vX[.X.X]` - maintenance releases
 
 If you use more than the main branch, optionally create an environment that is limiting where pushes can come from and enable the merge strategy.
@@ -72,7 +71,7 @@ on:
       - next
       - next-major
       - alpha
-      - beta
+      - dev
 
 jobs:
   release:
@@ -113,7 +112,7 @@ on:
       - next
       - next-major
       - alpha
-      - beta
+      - dev
 
 jobs:
   release:
@@ -212,4 +211,4 @@ npm run push
 
 ## ⚖️ LICENSE
 
-MIT © [TED (Teodor-Eugen Dutulescu) Vortex](./LICENSE)
+MIT © [Ogbonna Sunday](./LICENSE)
